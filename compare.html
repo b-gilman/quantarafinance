@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare Canadian credit cards side by side — fees, APR, rewards, and perks. Free tool by Quantara." />
+  <title>Compare Credit Cards — Quantara</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .page-hero { padding: 2.5rem 3rem 2rem; border-bottom: 0.5px solid var(--border); }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; line-height: 1.1; margin-bottom: 0.75rem; }
+    .page-hero p { font-size: 14px; font-weight: 300; color: var(--muted); max-width: 520px; line-height: 1.7; }
+    .tool-wrap { padding: 2rem 3rem; }
+    .slot-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); margin-bottom: 2rem; }
+    .slot { background: var(--navy-mid); padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 8px; }
+    .slot-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); }
+    .slot-select { font-family: 'Barlow', sans-serif; font-size: 13px; background: var(--navy-light); border: 0.5px solid var(--border); color: var(--white); padding: 8px 12px; width: 100%; outline: none; cursor: pointer; }
+    .slot-select:focus { border-color: var(--gold-dim); }
+    .compare-table { width: 100%; border-collapse: collapse; border: 0.5px solid var(--border); table-layout: fixed; }
+    .compare-table th { background: var(--navy-light); padding: 1rem 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-align: left; border-bottom: 0.5px solid var(--border); border-right: 0.5px solid var(--border); }
+    .compare-table th:first-child { color: var(--muted); width: 160px; }
+    .compare-table td { padding: 1rem 1.5rem; font-size: 14px; font-weight: 300; color: var(--white); border-bottom: 0.5px solid var(--border-sub); border-right: 0.5px solid var(--border-sub); vertical-align: top; word-wrap: break-word; }
+    .compare-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: var(--navy-mid); border-right: 0.5px solid var(--border); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: var(--navy-light); }
+    .compare-table tr:hover td:first-child { background: var(--navy-light); }
+    .best { color: #4ecb8a; font-weight: 500; }
+    .worst { color: #c07a7a; }
+    .score-pill { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--gold); }
+    .score-mini-bar { height: 2px; background: rgba(255,255,255,0.08); margin-top: 4px; width: 80px; }
+    .score-mini-fill { height: 2px; background: var(--gold); }
+    .tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; margin: 2px 2px 2px 0; }
+    .tag-cb { background: rgba(26,158,94,0.12); color: #4ecb8a; border: 0.5px solid rgba(26,158,94,0.3); }
+    .tag-travel { background: rgba(55,138,221,0.12); color: #7ab8f0; border: 0.5px solid rgba(55,138,221,0.25); }
+    .tag-nofee { background: rgba(138,111,47,0.12); color: var(--gold-dim); border: 0.5px solid rgba(138,111,47,0.3); }
+    .tag-credit { background: rgba(201,168,76,0.1); color: var(--gold); border: 0.5px solid var(--border); }
+    .verdict-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); margin-top: 2rem; }
+    .verdict-cell { background: var(--navy-mid); padding: 1.5rem; }
+    .verdict-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 8px; }
+    .verdict-text { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+    .verdict-text strong { color: var(--white); font-weight: 500; }
+    .empty-state { text-align: center; padding: 4rem 2rem; color: var(--muted); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; border: 0.5px solid var(--border); }
+    @media (max-width: 768px) {
+      .slot-row { grid-template-columns: 1fr; } .tool-wrap { padding: 1.5rem; }
+      .page-hero { padding: 2rem 1.5rem; } .page-hero h1 { font-size: 30px; }
+      .compare-table th:first-child { width: 100px; } .compare-table td, .compare-table th { padding: 0.75rem 1rem; font-size: 12px; }
+      .verdict-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Quantara</a>
+    <ul class="nav-links">
+      <li><a href="students.html">Cards</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="article.html">Guides</a></li>
+      <li><a href="compare.html" class="active">Compare</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <a href="compare.html" class="nav-cta">Find My Card</a>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html">Cards</a> &nbsp;/&nbsp; <span>Compare</span>
+  </div>
+
+  <div class="page-hero">
+    <div class="eyebrow">Tool · Side by Side</div>
+    <h1>Compare cards head-to-head</h1>
+    <p>Select up to three Canadian credit cards and see every fee, reward rate, and perk laid out side by side — no fluff, no bias.</p>
+  </div>
+
+  <div class="tool-wrap">
+    <div class="slot-row">
+      <div class="slot"><div class="slot-label">Card 1</div><select class="slot-select" onchange="selectCard(0,this.value)"><option value="">— Select a card —</option></select></div>
+      <div class="slot"><div class="slot-label">Card 2</div><select class="slot-select" onchange="selectCard(1,this.value)"><option value="">— Select a card —</option></select></div>
+      <div class="slot"><div class="slot-label">Card 3 (optional)</div><select class="slot-select" onchange="selectCard(2,this.value)"><option value="">— Select a card —</option></select></div>
+    </div>
+    <div id="comparison-output"></div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Quantara</div>
+    <div class="footer-note">© 2025 Quantara · Independent · Canada</div>
+  </footer>
+
+  <script>
+    const allCards = [
+      { id:'cobalt', bank:'American Express', name:'Cobalt Card', score:94, fee:'$0 (yr 1, then $155)', apr:'20.99%', rewardTop:'5x on food & drinks', rewardBase:'1x everything else', incomeReq:'None', creditReq:'Fair', perks:['Purchase protection','Mobile device insurance','Emergency travel assist'], bestFor:'Students who order food delivery and want maximum points on dining.', tagClasses:['tag-cb'], tagLabels:['Cashback'] },
+      { id:'scene', bank:'Scotiabank', name:'Scene+ Visa', score:88, fee:'$0', apr:'19.99%', rewardTop:'5x at Cineplex', rewardBase:'3x groceries / 1x other', incomeReq:'None', creditReq:'Fair', perks:['Scene+ movie redemptions','Grocery rewards','No annual fee forever'], bestFor:'Students who love movies and want strong grocery rewards.', tagClasses:['tag-cb','tag-nofee'], tagLabels:['Cashback','No Fee'] },
+      { id:'td-student', bank:'TD Bank', name:'TD Student Visa', score:81, fee:'$0', apr:'19.99%', rewardTop:'1x TD points all purchases', rewardBase:'1x everywhere', incomeReq:'$0 minimum', creditReq:'Any / None', perks:['No income requirement','Purchase security','TD rewards portal'], bestFor:'First-time credit card holders with no existing credit history.', tagClasses:['tag-nofee','tag-credit'], tagLabels:['No Fee','Credit Building'] },
+      { id:'rbc-rewards', bank:'RBC', name:'RBC Rewards+ Visa', score:77, fee:'$0', apr:'20.99%', rewardTop:'1.5x on groceries & gas', rewardBase:'1x everywhere else', incomeReq:'None stated', creditReq:'Fair', perks:['RBC Rewards travel redemptions','Fuel savings at Petro-Canada','No annual fee'], bestFor:'Students with a car who want travel points and gas savings.', tagClasses:['tag-travel','tag-nofee'], tagLabels:['Travel','No Fee'] },
+      { id:'cibc-dividend', bank:'CIBC', name:'CIBC Dividend Visa', score:74, fee:'$0', apr:'19.99%', rewardTop:'2% on gas & groceries', rewardBase:'1% everywhere else', incomeReq:'None', creditReq:'Fair', perks:['Actual cash deposited','No fee ever','Optional SPC membership discount'], bestFor:'Students who want straightforward cashback with no redemption complexity.', tagClasses:['tag-cb','tag-nofee'], tagLabels:['Cashback','No Fee'] },
+      { id:'bmo-cashback', bank:'BMO', name:'BMO CashBack Mastercard', score:72, fee:'$0', apr:'19.99%', rewardTop:'3% on groceries', rewardBase:'1% recurring bills / 0.5% other', incomeReq:'None', creditReq:'Fair', perks:['3% grocery cashback','No annual fee','BMO Rewards portal'], bestFor:'Students who cook at home and want to maximize grocery cashback.', tagClasses:['tag-cb','tag-nofee'], tagLabels:['Cashback','No Fee'] },
+      { id:'simplii', bank:'Simplii Financial', name:'Cash Back Visa', score:70, fee:'$0', apr:'19.99%', rewardTop:'4% on restaurants & bars', rewardBase:'1.5% gas & groceries / 0.5% other', incomeReq:'None', creditReq:'Fair', perks:['4% dining cashback','No annual fee','Simplii banking integration'], bestFor:'Students who eat out frequently and want high dining cashback.', tagClasses:['tag-cb','tag-nofee'], tagLabels:['Cashback','No Fee'] },
+      { id:'capital-one', bank:'Capital One', name:'Guaranteed Mastercard', score:68, fee:'$59/yr', apr:'19.8%', rewardTop:'No rewards', rewardBase:'0% — credit building only', incomeReq:'None', creditReq:'None / No check', perks:['No credit check required','Reports to Equifax & TransUnion','Graduates to unsecured card'], bestFor:'Newcomers or students with zero credit history who need guaranteed approval.', tagClasses:['tag-credit'], tagLabels:['Credit Building'] },
+    ];
+
+    const selected = [null, null, null];
+
+    function populateSelects() {
+      document.querySelectorAll('.slot-select').forEach((sel, i) => {
+        const cur = sel.value;
+        sel.innerHTML = `<option value="">— Select a card —</option>` + allCards.map(c => `<option value="${c.id}" ${cur===c.id?'selected':''}>${c.bank} — ${c.name}</option>`).join('');
+      });
+    }
+
+    function selectCard(idx, id) {
+      selected[idx] = id ? allCards.find(c => c.id === id) : null;
+      renderComparison();
+    }
+
+    function renderComparison() {
+      const active = selected.filter(Boolean);
+      const out = document.getElementById('comparison-output');
+      if (active.length === 0) { out.innerHTML = `<div class="empty-state">Select at least one card above to begin comparing.</div>`; return; }
+      if (active.length === 1) { out.innerHTML = `<div class="empty-state">Select a second card to compare.</div>`; return; }
+
+      const rows = [
+        { label:'Quantara Score', key:'score', render: c => `<div class="score-pill">${c.score}<span style="font-size:13px;opacity:0.4">/100</span></div><div class="score-mini-bar"><div class="score-mini-fill" style="width:${c.score}%"></div></div>` },
+        { label:'Annual Fee', key:'fee' },
+        { label:'Purchase APR', key:'apr' },
+        { label:'Top Reward', key:'rewardTop' },
+        { label:'Base Reward', key:'rewardBase' },
+        { label:'Income Required', key:'incomeReq' },
+        { label:'Credit Required', key:'creditReq' },
+        { label:'Best For', key:'bestFor' },
+        { label:'Perks', key:'perks', render: c => c.perks.map(p=>`<div style="font-size:13px;font-weight:300;color:var(--muted);margin-bottom:4px">· ${p}</div>`).join('') },
+        { label:'Categories', key:'categories', render: c => c.tagLabels.map((l,i)=>`<span class="tag ${c.tagClasses[i]}">${l}</span>`).join('') },
+      ];
+
+      const thead = `<tr><th>Category</th>${active.map(c=>`<th>${c.bank}<br><span style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;letter-spacing:0;color:var(--white)">${c.name}</span></th>`).join('')}</tr>`;
+
+      const tbody = rows.map(row => {
+        const vals = active.map(c => row.render ? row.render(c) : String(c[row.key]));
+        let cls = active.map(() => '');
+        if (row.key === 'score') { const mx = Math.max(...active.map(c=>c.score)); const mn = Math.min(...active.map(c=>c.score)); cls = active.map(c => c.score===mx?'best':c.score===mn&&active.length>1?'worst':''); }
+        if (row.key === 'fee') { const fees = active.map(c=>parseFloat(c.fee)||0); const mn = Math.min(...fees); cls = active.map((c,i)=>fees[i]===mn?'best':''); }
+        return `<tr><td>${row.label}</td>${vals.map((v,i)=>`<td class="${cls[i]}">${v}</td>`).join('')}</tr>`;
+      }).join('');
+
+      const verdicts = active.map(c => `<div class="verdict-cell"><div class="verdict-label">${c.bank} — ${c.name}</div><div class="verdict-text"><strong>Best for:</strong> ${c.bestFor}</div><button class="btn-apply" style="width:100%">Apply Now</button></div>`).join('');
+
+      out.innerHTML = `<table class="compare-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table><div class="verdict-row">${verdicts}</div>`;
+    }
+
+    populateSelects();
+    renderComparison();
+  </script>
+</body>
+</html>
