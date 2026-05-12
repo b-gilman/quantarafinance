@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Best credit cards for Canadian students in 2025 — ranked by Quantara. No annual fee picks, cashback, and credit-building cards." />
-  <title>Best Student Credit Cards Canada 2025 — Quantara</title>
+  <meta name="description" content="Best credit cards for Canadian retirees in 2025 — travel perks, insurance coverage, and low-rate options ranked independently by Quantara." />
+  <title>Best Credit Cards for Retirees Canada 2025 — Quantara</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     .page-hero { padding: 3rem 3rem 2rem; border-bottom: 0.5px solid var(--border); }
@@ -34,6 +34,7 @@
     .badge-cb { background: rgba(26,158,94,0.12); color: #4ecb8a; border: 0.5px solid rgba(26,158,94,0.3); }
     .badge-travel { background: rgba(55,138,221,0.12); color: #7ab8f0; border: 0.5px solid rgba(55,138,221,0.25); }
     .badge-nofee { background: rgba(138,111,47,0.12); color: var(--gold-dim); border: 0.5px solid rgba(138,111,47,0.3); }
+    .badge-lowrate { background: rgba(180,100,220,0.12); color: #d4a0f0; border: 0.5px solid rgba(180,100,220,0.25); }
     .rank-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 12px; max-width: 600px; }
     .rank-perks { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 14px; }
     .perk { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 5px; }
@@ -71,15 +72,15 @@
   </nav>
 
   <div class="breadcrumb">
-    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html">Cards</a> &nbsp;/&nbsp; <span>Students</span>
+    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html">Cards</a> &nbsp;/&nbsp; <span>Retirees</span>
   </div>
 
   <div class="page-hero">
-    <div class="eyebrow">Profile · Students</div>
-    <h1>Best credit cards<br>for students</h1>
-    <p>No annual fee picks, cashback on transit and food delivery, and cards that build your credit score — ranked independently for Canadian students.</p>
+    <div class="eyebrow">Profile · Retirees</div>
+    <h1>Best credit cards<br>for retirees</h1>
+    <p>Travel perks, comprehensive insurance coverage, low-rate options, and cashback on everyday spending — ranked independently for Canadian retirees on fixed or pension income.</p>
     <div class="hero-meta">
-      <div class="meta-item"><strong>18 cards</strong>Reviewed</div>
+      <div class="meta-item"><strong>22 cards</strong>Reviewed</div>
       <div class="meta-item"><strong>May 2025</strong>Last updated</div>
       <div class="meta-item"><strong>No sponsorships</strong>Independent</div>
     </div>
@@ -88,10 +89,10 @@
   <div class="filter-bar">
     <span class="filter-label">Filter:</span>
     <button class="filter-btn active" onclick="setFilter(this,'all')">All</button>
-    <button class="filter-btn" onclick="setFilter(this,'no-fee')">No Annual Fee</button>
-    <button class="filter-btn" onclick="setFilter(this,'cashback')">Cashback</button>
     <button class="filter-btn" onclick="setFilter(this,'travel')">Travel Rewards</button>
-    <button class="filter-btn" onclick="setFilter(this,'credit-building')">Credit Building</button>
+    <button class="filter-btn" onclick="setFilter(this,'cashback')">Cashback</button>
+    <button class="filter-btn" onclick="setFilter(this,'low-rate')">Low Rate</button>
+    <button class="filter-btn" onclick="setFilter(this,'no-fee')">No Annual Fee</button>
     <div class="filter-spacer"></div>
     <select class="sort-select" onchange="sortCards(this.value)">
       <option value="rank">Quantara Rank</option>
@@ -102,22 +103,27 @@
 
   <div class="rankings" id="rankings"></div>
 
-  <div class="section-note">Rankings are based on reward rate, approval accessibility, fees, and perks weighted for typical student spending. Affiliate links may be present — rankings are never influenced by compensation.</div>
+  <div class="section-note">Rankings are weighted for typical retiree spending: travel, dining, groceries, and pharmacy. Affiliate links may be present — rankings are never influenced by compensation.</div>
 
   <footer>
     <div class="footer-logo">Quantara</div>
-    <div class="footer-links" style="display:flex;gap:1.5rem;"><a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a><a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a></div><div class="footer-note">© 2025 Quantara · Independent · Canada</div>
+    <div class="footer-links" style="display:flex;gap:1.5rem;">
+      <a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a>
+      <a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+    </div>
+    <div class="footer-note">© 2025 Quantara · Independent · Canada</div>
   </footer>
 
   <script>
     const cards = [
-      { rank:1, bank:'American Express', name:'Cobalt Card', tag:"Editor's Pick", tagClass:'badge-top', desc:'The highest reward rate available to students in Canada. Earns 5x points on food and drinks — including Uber Eats and DoorDash — with no income requirement.', perks:['5x pts on food & drinks','3x on streaming','1x everything else','$0 annual fee first year'], apr:'20.99%', fee:'$0 yr 1', score:94, rewardRate:'5x', category:['cashback','no-fee'] },
-      { rank:2, bank:'Scotiabank', name:'Scene+ Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Earn Scene+ points redeemable for movies, travel, and statement credit. No income requirement and strong grocery rewards make this a top everyday card.', perks:['5x pts at Cineplex','3x at groceries','1x everywhere','No annual fee'], apr:'19.99%', fee:'$0', score:88, rewardRate:'3x', category:['cashback','no-fee'] },
-      { rank:3, bank:'TD Bank', name:'TD Student Visa', tag:'No Annual Fee', tagClass:'badge-nofee', desc:'One of the most accessible cards for first-time applicants. Pure credit building with no annual fee and a low minimum income threshold.', perks:['No annual fee','Low income threshold','Purchase protection','TD rewards points'], apr:'19.99%', fee:'$0', score:81, rewardRate:'1x', category:['no-fee','credit-building'] },
-      { rank:4, bank:'RBC', name:'RBC Rewards+ Visa', tag:'Travel Rewards', tagClass:'badge-travel', desc:'Earn RBC Rewards points redeemable for flights, merchandise, and gift cards. Solid for students with part-time income who want to start building travel points early.', perks:['1.5x on groceries & gas','1x everywhere else','Travel redemptions','No annual fee'], apr:'20.99%', fee:'$0', score:77, rewardRate:'1.5x', category:['travel','no-fee'] },
-      { rank:5, bank:'CIBC', name:'CIBC Dividend Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Straightforward cashback deposited directly to your account. The 2% on gas and groceries is strong for students with a car or weekly grocery runs.', perks:['2% on gas & groceries','1% everywhere else','Cash deposited yearly','No annual fee'], apr:'19.99%', fee:'$0', score:74, rewardRate:'2%', category:['cashback','no-fee'] },
-      { rank:6, bank:'BMO', name:'BMO CashBack Mastercard', tag:'Cashback', tagClass:'badge-cb', desc:'Clean 3% on groceries — the highest flat grocery cashback among no-fee student cards. Cash is deposited directly to your account once per year.', perks:['3% on groceries','1% on recurring bills','0.5% everywhere else','No annual fee'], apr:'19.99%', fee:'$0', score:72, rewardRate:'3%', category:['cashback','no-fee'] },
-      { rank:7, bank:'Capital One', name:'Guaranteed Mastercard', tag:'Credit Building', tagClass:'badge-nofee', desc:'No credit check required — ideal for newcomers or students with zero credit history. Secured card that graduates to unsecured after responsible use.', perks:['No credit check','Reports to both bureaus','Graduates to unsecured','Low deposit required'], apr:'19.8%', fee:'$59', score:68, rewardRate:'0%', category:['credit-building'] },
+      { rank:1, bank:'Scotiabank', name:'Gold American Express', tag:"Editor's Pick", tagClass:'badge-top', desc:'The best all-around travel rewards card for retirees. Earns 6x points at restaurants, 5x on groceries and transit, with comprehensive travel insurance including emergency medical — critical for retirees travelling abroad.', perks:['6x pts dining','5x groceries & transit','Comprehensive travel insurance','Airport lounge access'], apr:'20.99%', fee:'$120', score:92, rewardRate:'6x', category:['travel','cashback'] },
+      { rank:2, bank:'TD Bank', name:'TD First Class Travel Visa Infinite', tag:'Travel Rewards', tagClass:'badge-travel', desc:'Strong travel rewards with up to $500 in annual travel credits and superior emergency medical insurance coverage for travellers over 65. One of the few cards with extended coverage for older cardholders.', perks:['Up to $500 travel credit','Emergency medical over 65','3x pts on travel','Trip cancellation coverage'], apr:'20.99%', fee:'$139', score:88, rewardRate:'3x', category:['travel'] },
+      { rank:3, bank:'RBC', name:'RBC Avion Visa Infinite', tag:'Travel Rewards', tagClass:'badge-travel', desc:'Flexible Avion points redeemable for any flight on any airline with no blackout dates. Excellent for retirees who travel frequently and want maximum flexibility in redemptions.', perks:['Any airline redemptions','No blackout dates','Travel insurance included','Avion rewards portal'], apr:'20.99%', fee:'$120', score:84, rewardRate:'1.25x', category:['travel'] },
+      { rank:4, bank:'BMO', name:'BMO Eclipse Visa Infinite', tag:'Cashback', tagClass:'badge-cb', desc:'Earns 5x points on groceries, dining, gas, and transit — the four categories retirees spend the most on. Includes a $50 annual lifestyle credit that offsets the fee.', perks:['5x groceries & dining','5x gas & transit','$50 lifestyle credit','Authorized user included'], apr:'20.99%', fee:'$120', score:81, rewardRate:'5x', category:['cashback','travel'] },
+      { rank:5, bank:'CIBC', name:'CIBC Aeroplan Visa Infinite', tag:'Travel Rewards', tagClass:'badge-travel', desc:'Best card for Air Canada loyalists. Earns Aeroplan points on every purchase with strong travel insurance and priority check-in benefits — ideal for retirees who fly Air Canada regularly.', perks:['Aeroplan points','Air Canada priority','Travel insurance','Free checked bag'], apr:'20.99%', fee:'$139', score:78, rewardRate:'1.5x', category:['travel'] },
+      { rank:6, bank:'Scotiabank', name:'Scotia Momentum Visa Infinite', tag:'Cashback', tagClass:'badge-cb', desc:'The highest flat cashback rate in Canada on groceries and recurring bills at 4%. Straightforward cashback deposited annually — perfect for retirees who prefer simplicity over points programs.', perks:['4% groceries & recurring','2% gas & transit','1% everything else','No complex redemptions'], apr:'20.99%', fee:'$120', score:76, rewardRate:'4%', category:['cashback'] },
+      { rank:7, bank:'MBNA', name:'True Line Mastercard', tag:'Low Rate', tagClass:'badge-lowrate', desc:'Canada\'s most popular low-rate card at 12.99% APR — nearly half the standard rate. Ideal for retirees on fixed income who occasionally carry a balance and want to minimize interest costs.', perks:['12.99% purchase APR','No annual fee','Balance transfer option','Simple flat rate'], apr:'12.99%', fee:'$0', score:71, rewardRate:'0%', category:['low-rate','no-fee'] },
+      { rank:8, bank:'TD Bank', name:'TD Emerald Flex Rate Visa', tag:'Low Rate', tagClass:'badge-lowrate', desc:'Variable low rate card starting as low as TD prime + 4.5%. For retirees who carry balances, a lower APR saves significantly more than any rewards program at typical balance levels.', perks:['Variable low rate','No annual fee','Flexible rate structure','TD banking integration'], apr:'Prime+4.5%', fee:'$0', score:67, rewardRate:'0%', category:['low-rate','no-fee'] },
     ];
 
     let activeFilter = 'all';

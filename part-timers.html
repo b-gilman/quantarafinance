@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Best credit cards for Canadian students in 2025 — ranked by Quantara. No annual fee picks, cashback, and credit-building cards." />
-  <title>Best Student Credit Cards Canada 2025 — Quantara</title>
+  <meta name="description" content="Best credit cards for Canadian part-time workers in 2025 — low income thresholds, cashback, and flexible rewards ranked by Quantara." />
+  <title>Best Credit Cards for Part-Time Workers Canada 2025 — Quantara</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     .page-hero { padding: 3rem 3rem 2rem; border-bottom: 0.5px solid var(--border); }
@@ -71,15 +71,15 @@
   </nav>
 
   <div class="breadcrumb">
-    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html">Cards</a> &nbsp;/&nbsp; <span>Students</span>
+    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html">Cards</a> &nbsp;/&nbsp; <span>Part-Timers</span>
   </div>
 
   <div class="page-hero">
-    <div class="eyebrow">Profile · Students</div>
-    <h1>Best credit cards<br>for students</h1>
-    <p>No annual fee picks, cashback on transit and food delivery, and cards that build your credit score — ranked independently for Canadian students.</p>
+    <div class="eyebrow">Profile · Part-Timers</div>
+    <h1>Best credit cards for<br>part-time workers</h1>
+    <p>Low income thresholds, strong grocery and gas rewards, and cards that build your credit without requiring a full-time salary — ranked independently for Canadian part-time workers.</p>
     <div class="hero-meta">
-      <div class="meta-item"><strong>18 cards</strong>Reviewed</div>
+      <div class="meta-item"><strong>14 cards</strong>Reviewed</div>
       <div class="meta-item"><strong>May 2025</strong>Last updated</div>
       <div class="meta-item"><strong>No sponsorships</strong>Independent</div>
     </div>
@@ -90,7 +90,7 @@
     <button class="filter-btn active" onclick="setFilter(this,'all')">All</button>
     <button class="filter-btn" onclick="setFilter(this,'no-fee')">No Annual Fee</button>
     <button class="filter-btn" onclick="setFilter(this,'cashback')">Cashback</button>
-    <button class="filter-btn" onclick="setFilter(this,'travel')">Travel Rewards</button>
+    <button class="filter-btn" onclick="setFilter(this,'low-income')">Low Income Req.</button>
     <button class="filter-btn" onclick="setFilter(this,'credit-building')">Credit Building</button>
     <div class="filter-spacer"></div>
     <select class="sort-select" onchange="sortCards(this.value)">
@@ -102,22 +102,26 @@
 
   <div class="rankings" id="rankings"></div>
 
-  <div class="section-note">Rankings are based on reward rate, approval accessibility, fees, and perks weighted for typical student spending. Affiliate links may be present — rankings are never influenced by compensation.</div>
+  <div class="section-note">Rankings are weighted for part-time income profiles: low approval thresholds, grocery, gas, and transit rewards. Affiliate links may be present — rankings are never influenced by compensation.</div>
 
   <footer>
     <div class="footer-logo">Quantara</div>
-    <div class="footer-links" style="display:flex;gap:1.5rem;"><a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a><a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a></div><div class="footer-note">© 2025 Quantara · Independent · Canada</div>
+    <div class="footer-links" style="display:flex;gap:1.5rem;">
+      <a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a>
+      <a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+    </div>
+    <div class="footer-note">© 2025 Quantara · Independent · Canada</div>
   </footer>
 
   <script>
     const cards = [
-      { rank:1, bank:'American Express', name:'Cobalt Card', tag:"Editor's Pick", tagClass:'badge-top', desc:'The highest reward rate available to students in Canada. Earns 5x points on food and drinks — including Uber Eats and DoorDash — with no income requirement.', perks:['5x pts on food & drinks','3x on streaming','1x everything else','$0 annual fee first year'], apr:'20.99%', fee:'$0 yr 1', score:94, rewardRate:'5x', category:['cashback','no-fee'] },
-      { rank:2, bank:'Scotiabank', name:'Scene+ Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Earn Scene+ points redeemable for movies, travel, and statement credit. No income requirement and strong grocery rewards make this a top everyday card.', perks:['5x pts at Cineplex','3x at groceries','1x everywhere','No annual fee'], apr:'19.99%', fee:'$0', score:88, rewardRate:'3x', category:['cashback','no-fee'] },
-      { rank:3, bank:'TD Bank', name:'TD Student Visa', tag:'No Annual Fee', tagClass:'badge-nofee', desc:'One of the most accessible cards for first-time applicants. Pure credit building with no annual fee and a low minimum income threshold.', perks:['No annual fee','Low income threshold','Purchase protection','TD rewards points'], apr:'19.99%', fee:'$0', score:81, rewardRate:'1x', category:['no-fee','credit-building'] },
-      { rank:4, bank:'RBC', name:'RBC Rewards+ Visa', tag:'Travel Rewards', tagClass:'badge-travel', desc:'Earn RBC Rewards points redeemable for flights, merchandise, and gift cards. Solid for students with part-time income who want to start building travel points early.', perks:['1.5x on groceries & gas','1x everywhere else','Travel redemptions','No annual fee'], apr:'20.99%', fee:'$0', score:77, rewardRate:'1.5x', category:['travel','no-fee'] },
-      { rank:5, bank:'CIBC', name:'CIBC Dividend Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Straightforward cashback deposited directly to your account. The 2% on gas and groceries is strong for students with a car or weekly grocery runs.', perks:['2% on gas & groceries','1% everywhere else','Cash deposited yearly','No annual fee'], apr:'19.99%', fee:'$0', score:74, rewardRate:'2%', category:['cashback','no-fee'] },
-      { rank:6, bank:'BMO', name:'BMO CashBack Mastercard', tag:'Cashback', tagClass:'badge-cb', desc:'Clean 3% on groceries — the highest flat grocery cashback among no-fee student cards. Cash is deposited directly to your account once per year.', perks:['3% on groceries','1% on recurring bills','0.5% everywhere else','No annual fee'], apr:'19.99%', fee:'$0', score:72, rewardRate:'3%', category:['cashback','no-fee'] },
-      { rank:7, bank:'Capital One', name:'Guaranteed Mastercard', tag:'Credit Building', tagClass:'badge-nofee', desc:'No credit check required — ideal for newcomers or students with zero credit history. Secured card that graduates to unsecured after responsible use.', perks:['No credit check','Reports to both bureaus','Graduates to unsecured','Low deposit required'], apr:'19.8%', fee:'$59', score:68, rewardRate:'0%', category:['credit-building'] },
+      { rank:1, bank:'BMO', name:'BMO CashBack Mastercard', tag:"Editor's Pick", tagClass:'badge-top', desc:'The best no-fee cashback card for part-time workers. Earns 3% on groceries and 1% on recurring bills with no income requirement — a rare combination of strong rewards and zero barrier to entry.', perks:['3% on groceries','1% recurring bills','No income requirement','No annual fee'], apr:'19.99%', fee:'$0', score:91, rewardRate:'3%', category:['cashback','no-fee','low-income'] },
+      { rank:2, bank:'Scotiabank', name:'Scene+ Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Strong everyday rewards with 3x points at grocery stores and no income requirement. Scene+ points are easy to redeem for statement credits, movies, or travel — great flexibility for variable income earners.', perks:['3x pts groceries','5x at Cineplex','No income requirement','No annual fee'], apr:'19.99%', fee:'$0', score:86, rewardRate:'3x', category:['cashback','no-fee','low-income'] },
+      { rank:3, bank:'Simplii Financial', name:'Cash Back Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Earns 4% cashback at restaurants and bars — the highest dining rate on a no-fee card in Canada. Ideal for part-timers in the service industry who spend on food and want cash back on their own industry.', perks:['4% restaurants & bars','1.5% gas & groceries','0.5% everything else','No annual fee'], apr:'19.99%', fee:'$0', score:83, rewardRate:'4%', category:['cashback','no-fee','low-income'] },
+      { rank:4, bank:'CIBC', name:'CIBC Dividend Visa', tag:'Cashback', tagClass:'badge-cb', desc:'Clean 2% cashback on gas and groceries deposited directly to your account. No income threshold and straightforward cashback with no points system to navigate — just cash back in your account once a year.', perks:['2% gas & groceries','1% everywhere else','Direct cash deposit','No annual fee'], apr:'19.99%', fee:'$0', score:79, rewardRate:'2%', category:['cashback','no-fee','low-income'] },
+      { rank:5, bank:'RBC', name:'RBC Rewards+ Visa', tag:'No Annual Fee', tagClass:'badge-nofee', desc:'Earns 1.5x RBC Rewards points on groceries and gas with no annual fee and no minimum income. A solid starter card for part-timers wanting to accumulate travel points without committing to a premium card.', perks:['1.5x groceries & gas','1x everywhere else','No annual fee','Travel redemptions'], apr:'20.99%', fee:'$0', score:74, rewardRate:'1.5x', category:['cashback','no-fee','low-income'] },
+      { rank:6, bank:'TD Bank', name:'TD Student Visa', tag:'Credit Building', tagClass:'badge-nofee', desc:'No income requirement and no annual fee makes this the most accessible TD card for part-timers. Simple TD Points earn rate with a focus on credit building over rewards — a good foundation card.', perks:['No income requirement','No annual fee','TD rewards points','Purchase protection'], apr:'19.99%', fee:'$0', score:70, rewardRate:'1x', category:['no-fee','low-income','credit-building'] },
+      { rank:7, bank:'Home Trust', name:'Secured Visa', tag:'Credit Building', tagClass:'badge-nofee', desc:'A secured card requiring a refundable deposit — ideal for part-timers rebuilding credit or with a thin credit file. No credit check required and reports to both major bureaus to build your score.', perks:['No credit check','Reports to both bureaus','Refundable deposit','Upgrades to unsecured'], apr:'19.99%', fee:'$59', score:63, rewardRate:'0%', category:['credit-building'] },
     ];
 
     let activeFilter = 'all';
