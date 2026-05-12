@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amex Cobalt vs Scotiabank Scene+ Visa — Canada's two best no-fee student cards compared head to head. Which one actually earns more?" />
+  <title>Amex Cobalt vs Scotiabank Scene+: The Real Comparison — Quantara</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .article-hero { padding: 3.5rem 3rem 0; max-width: 860px; margin: 0 auto; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 1.25rem; }
+    .article-hero h1 em { font-style: italic; color: var(--gold); }
+    .article-lede { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.6; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta-bar { display: flex; align-items: center; gap: 2rem; padding: 1.25rem 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); margin-bottom: 3rem; flex-wrap: wrap; }
+    .meta-author { display: flex; align-items: center; gap: 10px; }
+    .author-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(201,168,76,0.15); border: 0.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; color: var(--gold); }
+    .author-name { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); }
+    .author-role { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .meta-divider { width: 1px; height: 28px; background: var(--border); }
+    .meta-item { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .meta-item strong { color: var(--white); display: block; font-size: 12px; margin-bottom: 1px; }
+    .article-layout { display: grid; grid-template-columns: 1fr 260px; gap: 3rem; padding: 0 3rem 4rem; max-width: 1100px; margin: 0 auto; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; margin: 2rem 0 0.75rem; }
+    .article-body p { font-size: 16px; font-weight: 300; line-height: 1.8; color: rgba(244,241,235,0.82); margin-bottom: 1.25rem; }
+    .article-body a { color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold-dim); }
+    .article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; }
+    .article-body ul li, .article-body ol li { font-size: 15px; font-weight: 300; line-height: 1.75; color: rgba(244,241,235,0.75); margin-bottom: 8px; }
+    .pullquote { border-left: 2px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0; }
+    .pullquote p { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--gold-light); line-height: 1.5; margin: 0; }
+    .info-box { border: 0.5px solid var(--border); background: rgba(201,168,76,0.04); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .info-box-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .info-box p { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.65; margin: 0; }
+    .vs-header { border: 0.5px solid var(--gold); background: var(--navy-mid); padding: 1.5rem; margin: 2rem 0; display: grid; grid-template-columns: 1fr 60px 1fr; gap: 1rem; align-items: center; }
+    .vs-card { text-align: center; }
+    .vs-bank { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 4px; }
+    .vs-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--white); line-height: 1.2; }
+    .vs-score { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--gold); margin-top: 6px; }
+    .vs-score-label { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .vs-middle { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--muted); text-align: center; opacity: 0.5; }
+    .compare-table { width: 100%; border-collapse: collapse; border: 0.5px solid var(--border); margin: 2rem 0; }
+    .compare-table th { background: var(--navy-light); padding: 0.875rem 1.25rem; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-align: left; border-bottom: 0.5px solid var(--border); border-right: 0.5px solid var(--border); }
+    .compare-table th:first-child { color: var(--muted); width: 140px; }
+    .compare-table td { padding: 0.875rem 1.25rem; font-size: 14px; font-weight: 300; color: var(--white); border-bottom: 0.5px solid var(--border-sub); border-right: 0.5px solid var(--border-sub); vertical-align: top; }
+    .compare-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: var(--navy-mid); border-right: 0.5px solid var(--border); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .winner-cell { color: #4ecb8a; font-weight: 500; }
+    .scenario-block { border: 0.5px solid var(--border); background: var(--navy-mid); padding: 1.5rem; margin: 1.5rem 0; }
+    .scenario-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .scenario-title { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 8px; }
+    .scenario-body { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.65; margin-bottom: 12px; }
+    .scenario-winner { display: flex; align-items: center; gap: 10px; }
+    .scenario-winner-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .scenario-winner-card { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #4ecb8a; }
+    .verdict-final { border: 0.5px solid var(--gold); background: rgba(201,168,76,0.06); padding: 1.5rem; margin: 2rem 0; }
+    .verdict-final-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .verdict-final p { font-size: 15px; font-weight: 300; color: rgba(244,241,235,0.82); line-height: 1.75; margin-bottom: 10px; }
+    .verdict-final p:last-child { margin-bottom: 0; }
+    .card-cta { border: 0.5px solid var(--gold); background: rgba(201,168,76,0.06); padding: 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .card-cta-text h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+    .card-cta-text p { font-size: 13px; font-weight: 300; color: var(--muted); margin: 0; }
+    .sidebar { padding-top: 0.5rem; }
+    .sidebar-block { margin-bottom: 2rem; border: 0.5px solid var(--border); }
+    .sidebar-head { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 0.5px solid var(--border); background: var(--navy-light); }
+    .sidebar-body { padding: 1rem; }
+    .toc-item { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 0.5px solid var(--border-sub); text-decoration: none; }
+    .toc-item:last-child { border-bottom: none; }
+    .toc-num { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--gold-dim); min-width: 16px; }
+    .toc-text { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.4; }
+    .toc-item:hover .toc-text { color: var(--white); }
+    .share-row { display: flex; gap: 8px; }
+    .share-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; background: transparent; border: 0.5px solid var(--border); color: var(--muted); padding: 6px 14px; cursor: pointer; flex: 1; }
+    .related-item { padding: 10px 1rem; border-bottom: 0.5px solid var(--border-sub); text-decoration: none; display: block; }
+    .related-item:last-child { border-bottom: none; }
+    .related-item:hover .toc-text { color: var(--white); }
+    @media (max-width: 768px) {
+      .article-hero, .article-layout { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .article-hero h1 { font-size: 30px; } .article-layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; } .vs-header { grid-template-columns: 1fr 40px 1fr; }
+      .compare-table th:first-child { width: 90px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Quantara</a>
+    <ul class="nav-links">
+      <li><a href="students.html">Cards</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="compare.html" class="nav-cta">Find My Card</a>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="guides.html">Guides</a> &nbsp;/&nbsp; <span>Amex Cobalt vs Scene+</span>
+  </div>
+
+  <div class="article-hero">
+    <div class="eyebrow">Comparison · Students</div>
+    <h1>Amex Cobalt vs Scotiabank Scene+:<br><em>the real comparison</em></h1>
+    <p class="article-lede">Canada's two best no-fee student cards go head to head. Which one actually earns more for the average Canadian student?</p>
+    <div class="article-meta-bar">
+      <div class="meta-author">
+        <div class="author-avatar">QT</div>
+        <div><div class="author-name">Quantara Editorial</div><div class="author-role">Finance Desk</div></div>
+      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><strong>May 2026</strong>Published</div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><strong>9 min read</strong>Length</div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><strong>Verified</strong>Independently reviewed</div>
+    </div>
+  </div>
+
+  <div class="article-layout">
+    <div class="article-body">
+
+      <p>Ask any Canadian personal finance community which student credit card to get and two names come up every time: the American Express Cobalt and the Scotiabank Scene+ Visa. Both have no annual fee in year one, both have strong reward rates, and both are accessible to students with no income requirement.</p>
+
+      <p>The problem is that most comparisons stop there. They list the earn rates, note that both are "great cards," and leave you no closer to knowing which one is actually right for you. This comparison goes further — including a realistic earnings calculation based on actual Canadian student spending patterns.</p>
+
+      <div class="vs-header">
+        <div class="vs-card">
+          <div class="vs-bank">American Express</div>
+          <div class="vs-name">Cobalt Card</div>
+          <div class="vs-score">94</div>
+          <div class="vs-score-label">Quantara Score</div>
+        </div>
+        <div class="vs-middle">vs</div>
+        <div class="vs-card">
+          <div class="vs-bank">Scotiabank</div>
+          <div class="vs-name">Scene+ Visa</div>
+          <div class="vs-score">88</div>
+          <div class="vs-score-label">Quantara Score</div>
+        </div>
+      </div>
+
+      <h2>The key facts side by side</h2>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Amex Cobalt</th>
+            <th>Scene+ Visa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Annual Fee</td><td>$0 year 1, then $155</td><td class="winner-cell">$0 forever</td></tr>
+          <tr><td>Food & Delivery</td><td class="winner-cell">5x points</td><td>1x points</td></tr>
+          <tr><td>Groceries</td><td>1x points</td><td class="winner-cell">3x points</td></tr>
+          <tr><td>Streaming</td><td class="winner-cell">3x points</td><td>1x points</td></tr>
+          <tr><td>Movies (Cineplex)</td><td>1x points</td><td class="winner-cell">5x points</td></tr>
+          <tr><td>Transit</td><td>2x points</td><td class="winner-cell">3x points</td></tr>
+          <tr><td>Everything Else</td><td>1x points</td><td>1x points</td></tr>
+          <tr><td>Income Required</td><td>None</td><td>None</td></tr>
+          <tr><td>Purchase APR</td><td>20.99%</td><td>19.99%</td></tr>
+          <tr><td>Mobile Device Insurance</td><td class="winner-cell">Yes</td><td>No</td></tr>
+          <tr><td>Point Value</td><td>~$0.01</td><td>~$0.01</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The real question: who actually earns more?</h2>
+
+      <p>The answer depends entirely on your spending habits. Let's run the numbers for three realistic Canadian student spending profiles.</p>
+
+      <div class="scenario-block">
+        <div class="scenario-label">Scenario 1 — The food delivery student</div>
+        <div class="scenario-title">Spends $300/month on food delivery, $100 on groceries</div>
+        <div class="scenario-body">
+          Cobalt: 300 × 5x + 100 × 1x = 1,600 pts/month = ~$192/year<br>
+          Scene+: 300 × 1x + 100 × 3x = 600 pts/month = ~$72/year<br><br>
+          Annual difference: $120 in favour of Cobalt — more than enough to justify the year-two fee of $155 if delivery spending stays high.
+        </div>
+        <div class="scenario-winner">
+          <div class="scenario-winner-label">Winner:</div>
+          <div class="scenario-winner-card">Amex Cobalt — by a wide margin</div>
+        </div>
+      </div>
+
+      <div class="scenario-block">
+        <div class="scenario-label">Scenario 2 — The home cook</div>
+        <div class="scenario-title">Spends $400/month on groceries, $50 on food delivery</div>
+        <div class="scenario-body">
+          Cobalt: 400 × 1x + 50 × 5x = 650 pts/month = ~$78/year<br>
+          Scene+: 400 × 3x + 50 × 1x = 1,250 pts/month = ~$150/year<br><br>
+          Annual difference: $72 in favour of Scene+ — and Scene+ has no year-two fee, widening the gap over time.
+        </div>
+        <div class="scenario-winner">
+          <div class="scenario-winner-label">Winner:</div>
+          <div class="scenario-winner-card">Scene+ Visa — and it only gets better after year one</div>
+        </div>
+      </div>
+
+      <div class="scenario-block">
+        <div class="scenario-label">Scenario 3 — The balanced student</div>
+        <div class="scenario-title">Spends $200 on delivery, $200 on groceries, goes to movies monthly</div>
+        <div class="scenario-body">
+          Cobalt: 200 × 5x + 200 × 1x = 1,200 pts/month = ~$144/year<br>
+          Scene+: 200 × 1x + 200 × 3x + 40 × 5x = 1,000 pts/month = ~$120/year<br><br>
+          Cobalt edges ahead in year one, but the $155 year-two fee flips the outcome. Scene+ wins over a 2+ year horizon.
+        </div>
+        <div class="scenario-winner">
+          <div class="scenario-winner-label">Winner:</div>
+          <div class="scenario-winner-card">Cobalt year 1, Scene+ year 2 onwards</div>
+        </div>
+      </div>
+
+      <div class="pullquote">
+        <p>"The Cobalt wins on delivery. The Scene+ wins on groceries. The annual fee is what decides who wins long-term."</p>
+      </div>
+
+      <h2>The fee problem — and why it matters more than people admit</h2>
+
+      <p>The Cobalt's $155 year-two fee is the single most important variable in this comparison. Most students who get the Cobalt in year one don't think about year two — and then either pay the fee without recalculating whether it's worth it, or cancel the card, which shortens their credit history.</p>
+
+      <p>Scene+ has no annual fee ever. That's a meaningful long-term advantage. A card you keep open for 5 years with no fee does more for your credit history than a card you cancel after year one to avoid a fee.</p>
+
+      <h2>Redemption comparison: how easy is it to actually use your points?</h2>
+
+      <p>Both programs are relatively straightforward but have different strengths:</p>
+
+      <ul>
+        <li><strong style="color:var(--white);font-weight:500">Amex Membership Rewards (Cobalt):</strong> Redeemable for travel through Amex Travel, statement credits, gift cards, and transfers to airline partners like Aeroplan. The transfer option adds significant value for travel hackers but adds complexity.</li>
+        <li><strong style="color:var(--white);font-weight:500">Scene+ (Scotiabank):</strong> Redeemable for movies at Cineplex, statement credits on travel, grocery purchases, and at Scene+ partner retailers. Simpler to use with no transfer required — just tap to redeem.</li>
+      </ul>
+
+      <p>For a student who wants to occasionally get a free movie or knock $50 off a grocery bill, Scene+ is genuinely easier. For a student planning to optimize points for a future flight, Cobalt's transfer partners add value.</p>
+
+      <h2>The verdict</h2>
+
+      <div class="verdict-final">
+        <div class="verdict-final-label">Quantara's verdict</div>
+        <p><strong style="color:var(--white);font-weight:500">Get the Cobalt if:</strong> you order food delivery regularly (2+ times per week), you're confident the rewards will justify the year-two fee, and you want the option to transfer points to Aeroplan for future travel.</p>
+        <p><strong style="color:var(--white);font-weight:500">Get the Scene+ if:</strong> you cook at home and grocery shop regularly, you want a card with no fee that you can keep forever without a second thought, you go to Cineplex occasionally, or you prefer simple cashback-style redemptions.</p>
+        <p><strong style="color:var(--white);font-weight:500">Both are excellent cards.</strong> The right choice is simply about matching the card to your spending. If you're genuinely unsure, Scene+ is the safer default — no fee means no downside to keeping it long-term.</p>
+      </div>
+
+      <div class="card-cta">
+        <div class="card-cta-text">
+          <h4>Want to compare them yourself?</h4>
+          <p>Use our free comparison tool to see both cards side by side with your own spending inputs.</p>
+        </div>
+        <a href="compare.html" class="btn-primary">Compare Cards</a>
+      </div>
+
+    </div>
+
+    <aside class="sidebar">
+      <div class="sidebar-block">
+        <div class="sidebar-head">In this article</div>
+        <div class="sidebar-body">
+          <a href="#" class="toc-item"><div class="toc-num">·</div><div class="toc-text">Key facts side by side</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">1</div><div class="toc-text">Scenario: Food delivery student</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">2</div><div class="toc-text">Scenario: Home cook</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">3</div><div class="toc-text">Scenario: Balanced student</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">·</div><div class="toc-text">The fee problem</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">·</div><div class="toc-text">Redemption comparison</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">·</div><div class="toc-text">The verdict</div></a>
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-head">Share</div>
+        <div class="sidebar-body">
+          <div class="share-row"><button class="share-btn">Twitter</button><button class="share-btn">Reddit</button></div>
+          <div class="share-row" style="margin-top:8px"><button class="share-btn">Copy link</button><button class="share-btn">TikTok</button></div>
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-head">Related guides</div>
+        <div class="sidebar-body" style="padding:0">
+          <a href="article-best-student-cards.html" class="related-item"><div class="toc-text" style="font-size:13px;line-height:1.4">Best no-fee student credit cards 2026</div></a>
+          <a href="article-build-credit.html" class="related-item"><div class="toc-text" style="font-size:13px;line-height:1.4">How to build credit as a student</div></a>
+          <a href="students.html" class="related-item"><div class="toc-text" style="font-size:13px;line-height:1.4">Full student card rankings</div></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Quantara</div>
+    <div class="footer-links" style="display:flex;gap:1.5rem;">
+      <a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a>
+      <a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+    </div>
+    <div class="footer-note">© 2026 Quantara · Independent · Canada</div>
+  </footer>
+</body>
+</html>

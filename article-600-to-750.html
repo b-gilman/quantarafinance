@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How to go from 600 to 750 credit score in 12 months — a practical month-by-month plan for rebuilding your Canadian credit score." />
+  <title>How to Go from 600 to 750 Credit Score in 12 Months — Quantara</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .article-hero { padding: 3.5rem 3rem 0; max-width: 860px; margin: 0 auto; }
+    .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 1.25rem; }
+    .article-hero h1 em { font-style: italic; color: var(--gold); }
+    .article-lede { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.6; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta-bar { display: flex; align-items: center; gap: 2rem; padding: 1.25rem 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); margin-bottom: 3rem; flex-wrap: wrap; }
+    .meta-author { display: flex; align-items: center; gap: 10px; }
+    .author-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(201,168,76,0.15); border: 0.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; color: var(--gold); }
+    .author-name { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); }
+    .author-role { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .meta-divider { width: 1px; height: 28px; background: var(--border); }
+    .meta-item { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .meta-item strong { color: var(--white); display: block; font-size: 12px; margin-bottom: 1px; }
+    .article-layout { display: grid; grid-template-columns: 1fr 260px; gap: 3rem; padding: 0 3rem 4rem; max-width: 1100px; margin: 0 auto; }
+    .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; margin: 2rem 0 0.75rem; }
+    .article-body p { font-size: 16px; font-weight: 300; line-height: 1.8; color: rgba(244,241,235,0.82); margin-bottom: 1.25rem; }
+    .article-body a { color: var(--gold); text-decoration: none; border-bottom: 0.5px solid var(--gold-dim); }
+    .article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; }
+    .article-body ul li, .article-body ol li { font-size: 15px; font-weight: 300; line-height: 1.75; color: rgba(244,241,235,0.75); margin-bottom: 8px; }
+    .pullquote { border-left: 2px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0; }
+    .pullquote p { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--gold-light); line-height: 1.5; margin: 0; }
+    .info-box { border: 0.5px solid var(--border); background: rgba(201,168,76,0.04); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .info-box-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .info-box p { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.65; margin: 0; }
+    .month-block { border: 0.5px solid var(--border); background: var(--navy-mid); padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+    .month-label { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--gold); line-height: 1; text-align: center; padding-top: 4px; }
+    .month-sublabel { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); text-align: center; margin-top: 2px; }
+    .month-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 500; color: var(--white); margin-bottom: 6px; }
+    .month-body { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.65; }
+    .month-score { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); margin-top: 8px; }
+    .progress-bar-wrap { border: 0.5px solid var(--border); background: var(--navy-mid); padding: 1.5rem; margin: 2rem 0; }
+    .progress-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .progress-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .progress-row:last-child { margin-bottom: 0; }
+    .progress-month { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); width: 52px; flex-shrink: 0; }
+    .progress-bar { height: 6px; background: rgba(255,255,255,0.06); flex: 1; border-radius: 1px; }
+    .progress-fill { height: 6px; background: var(--gold); border-radius: 1px; transition: width 0.3s; }
+    .progress-score { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 500; color: var(--white); width: 40px; text-align: right; flex-shrink: 0; }
+    .card-cta { border: 0.5px solid var(--gold); background: rgba(201,168,76,0.06); padding: 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .card-cta-text h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+    .card-cta-text p { font-size: 13px; font-weight: 300; color: var(--muted); margin: 0; }
+    .sidebar { padding-top: 0.5rem; }
+    .sidebar-block { margin-bottom: 2rem; border: 0.5px solid var(--border); }
+    .sidebar-head { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); padding: 0.75rem 1rem; border-bottom: 0.5px solid var(--border); background: var(--navy-light); }
+    .sidebar-body { padding: 1rem; }
+    .toc-item { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 0.5px solid var(--border-sub); text-decoration: none; }
+    .toc-item:last-child { border-bottom: none; }
+    .toc-num { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--gold-dim); min-width: 16px; }
+    .toc-text { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.4; }
+    .toc-item:hover .toc-text { color: var(--white); }
+    .share-row { display: flex; gap: 8px; }
+    .share-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; background: transparent; border: 0.5px solid var(--border); color: var(--muted); padding: 6px 14px; cursor: pointer; flex: 1; }
+    .related-item { padding: 10px 1rem; border-bottom: 0.5px solid var(--border-sub); text-decoration: none; display: block; }
+    .related-item:last-child { border-bottom: none; }
+    .related-item:hover .toc-text { color: var(--white); }
+    @media (max-width: 768px) {
+      .article-hero, .article-layout { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .article-hero h1 { font-size: 30px; } .article-layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; } .month-block { grid-template-columns: 60px 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Quantara</a>
+    <ul class="nav-links">
+      <li><a href="students.html">Cards</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="compare.html" class="nav-cta">Find My Card</a>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="guides.html">Guides</a> &nbsp;/&nbsp; <span>600 to 750 Credit Score in 12 Months</span>
+  </div>
+
+  <div class="article-hero">
+    <div class="eyebrow">Guide · Credit · Strategy</div>
+    <h1>How to go from 600 to 750<br>credit score in <em>12 months</em></h1>
+    <p class="article-lede">A practical month-by-month plan for rebuilding or improving your Canadian credit score faster than the average person.</p>
+    <div class="article-meta-bar">
+      <div class="meta-author">
+        <div class="author-avatar">QT</div>
+        <div><div class="author-name">Quantara Editorial</div><div class="author-role">Finance Desk</div></div>
+      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><strong>May 2026</strong>Published</div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><strong>12 min read</strong>Length</div>
+      <div class="meta-divider"></div>
+      <div class="meta-item"><strong>Verified</strong>Independently reviewed</div>
+    </div>
+  </div>
+
+  <div class="article-layout">
+    <div class="article-body">
+
+      <p>A 600 credit score in Canada puts you in "fair" territory — approved for some products, but at higher rates, with more rejections, and fewer options than you deserve. It's a score that reflects past financial difficulty or simply a thin credit file, and it can feel like a permanent mark.</p>
+
+      <p>It isn't. A 600 score is fixable, and with the right actions taken consistently, crossing 750 within 12 months is genuinely achievable for most people. Not easy — it requires discipline — but very possible.</p>
+
+      <p>This guide gives you a concrete month-by-month plan, not vague advice. Here's exactly what to do and when.</p>
+
+      <div class="info-box">
+        <div class="info-box-label">Before you start: check your credit report for errors</div>
+        <p>Before doing anything else, get your free credit reports from both Equifax and TransUnion. Review every account, every balance, every inquiry. Errors are more common than people think — incorrect late payments, accounts that aren't yours, balances that were paid off but still show as outstanding. Disputing errors can move your score 20–50 points before you change a single behaviour.</p>
+      </div>
+
+      <h2>Why 600 → 750 is harder than it sounds — and why it's still doable</h2>
+
+      <p>Moving 150 points sounds like a lot. It is. But credit scores aren't linear — the actions that move you from 600 to 650 are the same ones that eventually get you to 750. The difference is time and consistency, not complexity.</p>
+
+      <p>A 600 score typically reflects one or more of: missed payments in the past, high credit utilization, a thin credit file, too many recent hard inquiries, or some combination. Each of these is addressable. None of them are permanent.</p>
+
+      <div class="pullquote">
+        <p>"Credit scores are a lagging indicator. The work you do today shows up 30–60 days from now — which means starting immediately matters more than anything else."</p>
+      </div>
+
+      <h2>The projected score timeline</h2>
+
+      <div class="progress-bar-wrap">
+        <div class="progress-label">Projected score trajectory — starting at 600</div>
+        <div class="progress-row"><div class="progress-month">Start</div><div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div><div class="progress-score">600</div></div>
+        <div class="progress-row"><div class="progress-month">Mo. 2</div><div class="progress-bar"><div class="progress-fill" style="width:34%"></div></div><div class="progress-score">620</div></div>
+        <div class="progress-row"><div class="progress-month">Mo. 4</div><div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div><div class="progress-score">645</div></div>
+        <div class="progress-row"><div class="progress-month">Mo. 6</div><div class="progress-bar"><div class="progress-fill" style="width:44%"></div></div><div class="progress-score">670</div></div>
+        <div class="progress-row"><div class="progress-month">Mo. 9</div><div class="progress-bar"><div class="progress-fill" style="width:52%"></div></div><div class="progress-score">705</div></div>
+        <div class="progress-row"><div class="progress-month">Mo. 12</div><div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div><div class="progress-score">750+</div></div>
+      </div>
+
+      <h2>Month-by-month action plan</h2>
+
+      <div class="month-block">
+        <div>
+          <div class="month-label">1</div>
+          <div class="month-sublabel">Month</div>
+        </div>
+        <div>
+          <div class="month-title">Dispute errors, set up autopay, reduce utilization</div>
+          <div class="month-body">Pull both credit reports. Dispute every error in writing with the bureau. Set up autopay for the full balance on every credit card — this is non-negotiable going forward. If your utilization is above 30%, pay down balances aggressively this month. These three actions alone can move your score 20–40 points.</div>
+          <div class="month-score">Expected gain: +15 to +40 points</div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div>
+          <div class="month-label">2</div>
+          <div class="month-sublabel">Month</div>
+        </div>
+        <div>
+          <div class="month-title">Request a credit limit increase on existing cards</div>
+          <div class="month-body">Call your bank and request a credit limit increase without a hard inquiry — many banks allow this if you've been a customer in good standing. A higher limit with the same balance reduces your utilization ratio immediately. If you have a $2,000 limit and $600 balance (30%), getting a $4,000 limit drops utilization to 15% overnight.</div>
+          <div class="month-score">Expected gain: +10 to +20 points</div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div>
+          <div class="month-label">3</div>
+          <div class="month-sublabel">Month</div>
+        </div>
+        <div>
+          <div class="month-title">Apply for a secured card if your file is thin</div>
+          <div class="month-body">If your credit file has fewer than 2 active accounts, a second card adds to your credit mix and provides another line reporting on-time payments. Use a secured card or a no-fee student card. Spend small amounts, pay in full. Do not apply for more than one new card at this stage — the hard inquiry will temporarily drop your score 5–10 points.</div>
+          <div class="month-score">Expected gain: +5 to +15 points (after inquiry recovery)</div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div>
+          <div class="month-label">4–6</div>
+          <div class="month-sublabel">Months</div>
+        </div>
+        <div>
+          <div class="month-title">Stay consistent — pay in full, keep utilization under 10%</div>
+          <div class="month-body">This is the compounding phase. Every on-time payment builds positive history. Keep utilization under 10% across all cards — not 30%, not 29%, ideally under 10%. This is the range where the utilization factor stops being a drag and starts being an asset. Check your score monthly via Borrowell or Credit Karma to track progress.</div>
+          <div class="month-score">Expected gain: +25 to +40 points over this period</div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div>
+          <div class="month-label">7–9</div>
+          <div class="month-sublabel">Months</div>
+        </div>
+        <div>
+          <div class="month-title">Address any remaining negative marks</div>
+          <div class="month-body">By month 7 your positive payment history is accumulating meaningfully. Now look at any remaining negative marks — collections, late payments, charged-off accounts. If you have accounts in collections, contact the collection agency to negotiate a "pay for delete" arrangement. Not all agencies will agree, but some will remove the entry in exchange for payment.</div>
+          <div class="month-score">Expected gain: +15 to +30 points if negative marks resolved</div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div>
+          <div class="month-label">10–12</div>
+          <div class="month-sublabel">Months</div>
+        </div>
+        <div>
+          <div class="month-title">Hold the line — don't open new credit, don't close old cards</div>
+          <div class="month-body">The final stretch is about not making mistakes. Don't apply for new credit — each hard inquiry costs 5–10 points. Don't close old accounts — closing reduces available credit and shortens average account age. Keep utilization below 10%. Keep paying in full. By month 12, most people following this plan land between 720 and 760.</div>
+          <div class="month-score">Expected gain: +10 to +25 points</div>
+        </div>
+      </div>
+
+      <h2>What actually determines how fast you improve</h2>
+
+      <ul>
+        <li><strong style="color:var(--white);font-weight:500">How many negative marks you have:</strong> One missed payment 2 years ago is much easier to recover from than 6 missed payments in the last year. Recent negatives hurt more than old ones.</li>
+        <li><strong style="color:var(--white);font-weight:500">Your current utilization:</strong> If you're at 80% utilization, getting to 10% is a massive lever. If you're already at 25%, the gains from utilization improvement are smaller.</li>
+        <li><strong style="color:var(--white);font-weight:500">Whether errors exist on your report:</strong> Finding and disputing errors is the highest ROI action in credit repair — it can move your score with no behaviour change required.</li>
+        <li><strong style="color:var(--white);font-weight:500">Consistency over the 12 months:</strong> One missed payment during your recovery plan can wipe out 2–3 months of gains. Autopay is not optional.</li>
+      </ul>
+
+      <div class="info-box">
+        <div class="info-box-label">What a 750 score actually unlocks</div>
+        <p>At 750+ you qualify for the best mortgage rates in Canada (potentially saving $30,000–60,000 over 25 years on a $500,000 mortgage), the best car loan rates, premium travel credit cards with strong rewards, and near-guaranteed rental approval in competitive markets. The 150-point journey from 600 to 750 is one of the highest-return financial projects you can undertake.</p>
+      </div>
+
+      <h2>The bottom line</h2>
+
+      <p>Going from 600 to 750 in 12 months is achievable if you start immediately, stay consistent, and don't make new mistakes along the way. The plan is simple: dispute errors, reduce utilization, pay every balance in full, don't apply for new credit unnecessarily, and let time do its work.</p>
+
+      <p>The hardest part isn't knowing what to do. It's doing it consistently for 12 months without shortcuts.</p>
+
+      <div class="card-cta">
+        <div class="card-cta-text">
+          <h4>Ready to start building?</h4>
+          <p>Find the best credit card to help you build or rebuild your Canadian credit score.</p>
+        </div>
+        <a href="students.html" class="btn-primary">View Card Rankings</a>
+      </div>
+
+    </div>
+
+    <aside class="sidebar">
+      <div class="sidebar-block">
+        <div class="sidebar-head">In this article</div>
+        <div class="sidebar-body">
+          <a href="#" class="toc-item"><div class="toc-num">·</div><div class="toc-text">Check report for errors first</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">·</div><div class="toc-text">Score trajectory chart</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">1</div><div class="toc-text">Month 1 — Dispute, autopay, utilization</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">2</div><div class="toc-text">Month 2 — Limit increase</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">3</div><div class="toc-text">Month 3 — Second card</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">4</div><div class="toc-text">Months 4–6 — Compound</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">5</div><div class="toc-text">Months 7–9 — Negative marks</div></a>
+          <a href="#" class="toc-item"><div class="toc-num">6</div><div class="toc-text">Months 10–12 — Hold the line</div></a>
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-head">Share</div>
+        <div class="sidebar-body">
+          <div class="share-row"><button class="share-btn">Twitter</button><button class="share-btn">Reddit</button></div>
+          <div class="share-row" style="margin-top:8px"><button class="share-btn">Copy link</button><button class="share-btn">TikTok</button></div>
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-head">Related guides</div>
+        <div class="sidebar-body" style="padding:0">
+          <a href="article-credit-score.html" class="related-item"><div class="toc-text" style="font-size:13px;line-height:1.4">What is a credit score and why does it matter?</div></a>
+          <a href="article-build-credit.html" class="related-item"><div class="toc-text" style="font-size:13px;line-height:1.4">How to build credit as a student</div></a>
+          <a href="article-best-student-cards.html" class="related-item"><div class="toc-text" style="font-size:13px;line-height:1.4">Best no-fee student credit cards 2026</div></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Quantara</div>
+    <div class="footer-links" style="display:flex;gap:1.5rem;">
+      <a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a>
+      <a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+    </div>
+    <div class="footer-note">© 2026 Quantara · Independent · Canada</div>
+  </footer>
+</body>
+</html>
