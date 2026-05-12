@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Best premium credit cards for Canadian professionals in 2025 — travel rewards, airport lounges, and high-limit cards ranked by Quantara." />
+  <title>Best Credit Cards for Professionals Canada 2025 — Quantara</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .page-hero { padding: 3rem 3rem 2rem; border-bottom: 0.5px solid var(--border); }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; margin-bottom: 1rem; }
+    .page-hero p { font-size: 15px; font-weight: 300; color: var(--muted); max-width: 580px; line-height: 1.7; margin-bottom: 1.5rem; }
+    .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .meta-item { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .meta-item strong { color: var(--white); display: block; font-size: 13px; margin-bottom: 2px; }
+    .filter-bar { display: flex; align-items: center; gap: 1rem; padding: 1rem 3rem; border-bottom: 0.5px solid var(--border); flex-wrap: wrap; }
+    .filter-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+    .filter-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; border: 0.5px solid var(--border); color: var(--muted); padding: 7px 16px; cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .filter-spacer { flex: 1; }
+    .sort-select { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--navy-light); border: 0.5px solid var(--border); color: var(--white); padding: 7px 12px; cursor: pointer; outline: none; }
+    .rankings { padding: 2rem 3rem; }
+    .rank-card { display: grid; grid-template-columns: 48px 1fr auto; border: 0.5px solid var(--border); margin-bottom: 1px; background: var(--navy-mid); transition: background 0.2s; cursor: pointer; }
+    .rank-card:hover { background: var(--navy-light); }
+    .rank-card.featured { border-color: var(--gold); border-width: 1px; }
+    .rank-num { display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--gold-dim); border-right: 0.5px solid var(--border); min-height: 130px; }
+    .rank-card.featured .rank-num { color: var(--gold); background: rgba(201,168,76,0.06); }
+    .rank-body { padding: 1.5rem 1.75rem; }
+    .rank-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; }
+    .rank-bank { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 4px; }
+    .rank-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--white); }
+    .rank-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 12px; white-space: nowrap; }
+    .badge-top { background: rgba(201,168,76,0.15); color: var(--gold); border: 0.5px solid var(--gold-dim); }
+    .badge-cb { background: rgba(26,158,94,0.12); color: #4ecb8a; border: 0.5px solid rgba(26,158,94,0.3); }
+    .badge-travel { background: rgba(55,138,221,0.12); color: #7ab8f0; border: 0.5px solid rgba(55,138,221,0.25); }
+    .badge-premium { background: rgba(201,168,76,0.1); color: var(--gold); border: 0.5px solid var(--border); }
+    .rank-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 12px; max-width: 600px; }
+    .rank-perks { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 14px; }
+    .perk { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .perk-dot { width: 4px; height: 4px; background: var(--gold-dim); border-radius: 50%; flex-shrink: 0; }
+    .cta-row { display: flex; gap: 10px; }
+    .rank-stats { padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 14px; border-left: 0.5px solid var(--border); min-width: 150px; }
+    .stat { text-align: right; }
+    .stat-val { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; line-height: 1; }
+    .stat-key { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+    .stat-val.gold { color: var(--gold); }
+    .score-bar { height: 2px; background: rgba(255,255,255,0.08); margin-top: 5px; }
+    .score-fill { height: 2px; background: var(--gold); }
+    .section-note { padding: 1rem 3rem 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 768px) {
+      .rank-card { grid-template-columns: 36px 1fr; } .rank-stats { display: none; }
+      .page-hero { padding: 2rem 1.5rem; } .page-hero h1 { font-size: 32px; }
+      .filter-bar, .rankings, .section-note { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Quantara</a>
+    <ul class="nav-links">
+      <li><a href="students.html" class="active">Cards</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="article.html">Guides</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="compare.html" class="nav-cta">Find My Card</a>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html">Cards</a> &nbsp;/&nbsp; <span>Professionals</span>
+  </div>
+
+  <div class="page-hero">
+    <div class="eyebrow">Profile · Professionals</div>
+    <h1>Best credit cards<br>for professionals</h1>
+    <p>Premium travel rewards, airport lounge access, comprehensive insurance, and high credit limits — ranked for Canadian professionals with $60,000+ household income.</p>
+    <div class="hero-meta">
+      <div class="meta-item"><strong>31 cards</strong>Reviewed</div>
+      <div class="meta-item"><strong>May 2025</strong>Last updated</div>
+      <div class="meta-item"><strong>No sponsorships</strong>Independent</div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="setFilter(this,'all')">All</button>
+    <button class="filter-btn" onclick="setFilter(this,'travel')">Travel Rewards</button>
+    <button class="filter-btn" onclick="setFilter(this,'cashback')">Cashback</button>
+    <button class="filter-btn" onclick="setFilter(this,'lounge')">Lounge Access</button>
+    <button class="filter-btn" onclick="setFilter(this,'ultra-premium')">Ultra Premium</button>
+    <div class="filter-spacer"></div>
+    <select class="sort-select" onchange="sortCards(this.value)">
+      <option value="rank">Quantara Rank</option>
+      <option value="score">Score</option>
+      <option value="fee">Annual Fee</option>
+    </select>
+  </div>
+
+  <div class="rankings" id="rankings"></div>
+
+  <div class="section-note">Rankings weighted for professional spending: travel, dining, and high-volume everyday purchases. Income requirements apply. Affiliate links may be present — rankings are never influenced by compensation.</div>
+
+  <footer>
+    <div class="footer-logo">Quantara</div>
+    <div class="footer-links" style="display:flex;gap:1.5rem;">
+      <a href="disclaimer.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Disclaimer</a>
+      <a href="privacy.html" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+    </div>
+    <div class="footer-note">© 2025 Quantara · Independent · Canada</div>
+  </footer>
+
+  <script>
+    const cards = [
+      { rank:1, bank:'American Express', name:'Platinum Card', tag:"Editor's Pick", tagClass:'badge-top', desc:'Canada\'s most prestigious credit card. $200 annual travel credit, unlimited airport lounge access via Priority Pass, comprehensive travel insurance, and Membership Rewards points on every purchase. The fee pays for itself for frequent travellers.', perks:['Unlimited lounge access','$200 travel credit','Comprehensive insurance','Concierge service'], apr:'N/A charge card', fee:'$799', score:95, rewardRate:'3x', category:['travel','lounge','ultra-premium'] },
+      { rank:2, bank:'Scotiabank', name:'Passport Visa Infinite', tag:'Travel Rewards', tagClass:'badge-travel', desc:'The best mid-tier travel card in Canada. No foreign transaction fees, 6 free airport lounge visits per year, and strong Scene+ rewards on travel and dining. Excellent value at $150 annually.', perks:['No foreign transaction fees','6 lounge visits/year','3x pts dining & groceries','Comprehensive travel insurance'], apr:'20.99%', fee:'$150', score:91, rewardRate:'3x', category:['travel','lounge','cashback'] },
+      { rank:3, bank:'TD Bank', name:'TD Aeroplan Visa Infinite Privilege', tag:'Travel Rewards', tagClass:'badge-travel', desc:'The premium Aeroplan card for Air Canada loyalists. Earn up to 2x Aeroplan points, free checked bags, priority boarding, and Maple Leaf Lounge access when flying Air Canada.', perks:['Maple Leaf Lounge access','Free checked bags','Priority boarding','2x Aeroplan pts'], apr:'20.99%', fee:'$599', score:87, rewardRate:'2x', category:['travel','lounge','ultra-premium'] },
+      { rank:4, bank:'RBC', name:'RBC Avion Visa Infinite Privilege', tag:'Travel Rewards', tagClass:'badge-travel', desc:'Top-tier RBC card with the most flexible travel redemption in Canada — any flight, any airline, no blackout dates. Includes comprehensive travel insurance and dedicated concierge.', perks:['Any airline, no blackouts','Dedicated concierge','$100 annual travel credit','Comprehensive insurance'], apr:'20.99%', fee:'$399', score:84, rewardRate:'1.25x', category:['travel','ultra-premium'] },
+      { rank:5, bank:'BMO', name:'BMO eclipse Visa Infinite Privilege', tag:'Premium', tagClass:'badge-premium', desc:'BMO\'s flagship card with 5x points on travel, dining, groceries, and gas plus a $200 annual lifestyle credit. One of the best earning rates among premium Canadian cards.', perks:['5x travel & dining','$200 lifestyle credit','6 lounge visits/year','Comprehensive insurance'], apr:'20.99%', fee:'$499', score:81, rewardRate:'5x', category:['travel','lounge','cashback'] },
+      { rank:6, bank:'CIBC', name:'CIBC Aventura Visa Infinite', tag:'Cashback', tagClass:'badge-cb', desc:'Strong everyday Aventura points earner with flexible redemptions for flights, hotels, and merchandise. Solid travel insurance package and $120 NEXUS rebate for frequent US-Canada border crossers.', perks:['Flexible Aventura points','$120 NEXUS rebate','Travel insurance','4 lounge visits/year'], apr:'20.99%', fee:'$139', score:77, rewardRate:'2x', category:['travel','cashback'] },
+      { rank:7, bank:'Scotia', name:'Scotia Momentum Visa Infinite', tag:'Cashback', tagClass:'badge-cb', desc:'Best pure cashback card for high earners. 4% on groceries and recurring bills, 2% on gas and transit — the highest flat cashback rates in Canada at this price point.', perks:['4% groceries & recurring','2% gas & transit','No foreign fee first year','Travel insurance'], apr:'20.99%', fee:'$120', score:74, rewardRate:'4%', category:['cashback'] },
+    ];
+
+    let activeFilter = 'all';
+
+    function setFilter(btn, filter) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = filter;
+      renderCards();
+    }
+
+    function sortCards(val) {
+      if (val === 'score') cards.sort((a,b) => b.score - a.score);
+      else if (val === 'fee') cards.sort((a,b) => (parseFloat(a.fee)||0) - (parseFloat(b.fee)||0));
+      else cards.sort((a,b) => a.rank - b.rank);
+      renderCards();
+    }
+
+    function renderCards() {
+      const filtered = activeFilter === 'all' ? cards : cards.filter(c => c.category.includes(activeFilter));
+      document.getElementById('rankings').innerHTML = filtered.map((c,i) => `
+        <div class="rank-card ${i===0 && activeFilter==='all' ? 'featured' : ''}">
+          <div class="rank-num">${i+1}</div>
+          <div class="rank-body">
+            <div class="rank-top">
+              <div><div class="rank-bank">${c.bank}</div><div class="rank-name">${c.name}</div></div>
+              <span class="rank-badge ${c.tagClass}">${c.tag}</span>
+            </div>
+            <div class="rank-desc">${c.desc}</div>
+            <div class="rank-perks">${c.perks.map(p=>`<div class="perk"><div class="perk-dot"></div>${p}</div>`).join('')}</div>
+            <div class="cta-row">
+              <button class="btn-apply">Apply Now</button>
+              <a href="article.html" class="btn-review">Full Review</a>
+            </div>
+          </div>
+          <div class="rank-stats">
+            <div class="stat">
+              <div class="stat-val gold">${c.score}<span style="font-size:13px;opacity:0.4">/100</span></div>
+              <div class="stat-key">Quantara Score</div>
+              <div class="score-bar"><div class="score-fill" style="width:${c.score}%"></div></div>
+            </div>
+            <div class="stat"><div class="stat-val">${c.rewardRate}</div><div class="stat-key">Top Reward</div></div>
+            <div class="stat"><div class="stat-val">${c.fee}</div><div class="stat-key">Annual Fee</div></div>
+            <div class="stat"><div class="stat-val" style="font-size:13px">${c.apr}</div><div class="stat-key">APR</div></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderCards();
+  </script>
+</body>
+</html>
